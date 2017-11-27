@@ -34,12 +34,13 @@ def last_checkpoint(load_path):
     return checkpoints[-1] if checkpoints else None
 
 
-def restore_graph_variables(load_path, filename=None):
+def restore_graph_variables(load_path, filename=None, sess=None):
     if not filename:
         checkpoint = last_checkpoint(load_path)
     else:
         checkpoint = os.path.join(load_path, filename)
-    sess = tf.get_default_session()
+    if sess is None:
+        sess = tf.get_default_session()
     if checkpoint is None:
         return 0
     loader = tf.train.Saver(var_list=None)

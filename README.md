@@ -2,7 +2,7 @@
 An easy way to load and save checkpoints in Tensorflow!
 
 ## Installation
-```
+```bash
 git clone https://github.com/philipperemy/tf-easy-model-saving.git
 cd tf-easy-model-saving
 pip3 install .
@@ -14,7 +14,7 @@ Check `example.py` for more information.
 
 ### Restore model variables  (<-)
 
-```
+```python
 from easy_model_saving import model_saver
 
 # define graph and session
@@ -33,7 +33,7 @@ else:
 
 ### Save model variables (->)
 
-```
+```python
 from easy_model_saving import model_saver
 
 # define graph and session

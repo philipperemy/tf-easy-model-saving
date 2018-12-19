@@ -18,16 +18,11 @@ Check `example.py` for more information.
 from easy_model_saving import model_saver
 
 # define graph and session
-
 last_step = model_saver.restore_graph_variables(checkpoint_dir)
-
 if last_step == 0:
-
     print('Did not find any weights.')
     model_saver.initialize_graph_variables()
-    
 else:
-
     print('Restore successful.')
 ```
 
